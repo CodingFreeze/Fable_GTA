@@ -1,12 +1,45 @@
 # GTA-2W — GTA 2 Web Clone (Three.js)
 
-Top-down arcade driving/action game in the spirit of GTA 2, built with React + Three.js (@react-three/fiber), fully data-driven.
+A top-down arcade driving/action game in the spirit of **GTA 2**, running entirely in the browser. Drive cars with responsive arcade physics, hop out on foot, pick up weapons, blow up barrels, plow through traffic, and rack up score — all rendered in real-time 3D with a fixed top-down chase camera.
+
+The whole game is **data-driven**: every gameplay value (map layout, tile types, vehicle handling, weapons, asset transforms) lives in editable JSON, and the project ships with two in-browser editors — an **Asset Editor** (position/scale any model, upload your own GLB) and a **Config menu** (swap tile textures, tune vehicle handling live). Maps can be authored visually in [Tiled](https://www.mapeditor.org/) and imported as `.tmj`.
+
+## Tech stack
+
+- **React 19** + **TypeScript** (strict)
+- **Three.js** via **@react-three/fiber** + **@react-three/drei**
+- **Zustand** for shared state / live config hot-apply
+- **Vite** build tooling
+
+> Requires a browser with **WebGL** enabled (any modern desktop browser).
+
+## Features
+
+- 🚗 Arcade top-down driving — accel, braking, reverse, drift, handbrake (per-vehicle tuning)
+- 🚶 On-foot player with enter/exit any nearby vehicle
+- 🔫 Weapons + instanced projectiles, ammo pickups
+- 💥 Explosive barrels with chain reactions
+- 🚦 Wandering pedestrians + AI traffic cars
+- 🏙️ Instanced city map (one InstancedMesh per tile type) with live custom PNG textures
+- 🎛️ In-browser Asset Editor (gizmo + sliders + GLB upload, hot-apply to game)
+- 🗺️ Tiled `.tmj` map import
+- ⚡ Stable 60 fps
 
 ## Run
 
 ```bash
 npm install
-npm run dev
+npm run dev      # start dev server (Vite prints the local URL)
+```
+
+Then open the printed URL (default http://localhost:5173) in a WebGL-capable browser.
+
+### Other commands
+
+```bash
+npm run build    # type-check + production build to dist/
+npm run preview  # serve the production build locally
+npm run lint     # ESLint
 ```
 
 ## Controls
