@@ -1,5 +1,7 @@
 # GTA-2W — GTA 2 Web Clone (Three.js)
 
+> 🤖 **A Fable 5 experiment.** One of a handful of silly side projects I had **Fable 5** build before the model was banned. I wanted to see how good Fable really was at game design — so I handed it a concept (a top-down GTA 2 tribute) and let it run. It's a fun prototype, not a finished product; if Fable ever comes back, or I find the free time, I may pick it up and finish it.
+
 A top-down arcade driving/action game in the spirit of **GTA 2**, running entirely in the browser. Drive cars with responsive arcade physics, hop out on foot, pick up weapons, blow up barrels, plow through traffic, and rack up score — all rendered in real-time 3D with a fixed top-down chase camera.
 
 The whole game is **data-driven**: every gameplay value (map layout, tile types, vehicle handling, weapons, asset transforms) lives in editable JSON, and the project ships with two in-browser editors — an **Asset Editor** (position/scale any model, upload your own GLB) and a **Config menu** (swap tile textures, tune vehicle handling live). Maps can be authored visually in [Tiled](https://www.mapeditor.org/) and imported as `.tmj`.
